@@ -1,0 +1,35 @@
+<%- include('partials/header') %>
+
+<div class="container py-5">
+    <h1> Add New Todo Here </h1>
+  <form action="/addtodo" method="POST">
+    <div class="form-group py-3">
+        <h3><label for="exampleInputEmail1">Title</label></h3>
+      
+      <input
+        type="text"
+        class="form-control"
+        id="exampleInputEmail1"
+        name="title"
+        aria-describedby="emailHelp"
+        placeholder="Enter title"
+      />
+      <small id="emailHelp" class="form-text text-muted">Better do what you commit...</small>
+    </div>
+    <div class="form-group py-3">
+        <h3><label for="exampleInputPassword1">Description</label></h3>
+      
+      <input
+        type="text"
+        class="form-control"
+        name="Desc"
+        id="exampleInputPassword1"
+        placeholder="Description..."
+      />
+    </div>
+    
+    <button type="submit" class="btn btn-success ">Add Todo</button>
+  </form>
+</div>
+
+<%- include('partials/footer') %>

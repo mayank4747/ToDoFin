@@ -1,0 +1,29 @@
+
+    <%-  include('partials/header') %> 
+    <div class="container py-4">
+        <div class="px-2">
+            <h1>Todo List</h1>
+        </div>
+        
+      <%  for(let tas of todos){   %>
+            <!-- <h3><%= tas.title %></h3>
+            <h5><%= tas.desc %></h5> -->
+            <div class="py-3 px-3 d-inline-flex p-2">
+                <div class="card py-3 px-3" style="width: 18rem;">
+                
+                    <div class="card-body">
+                      <h5 class="card-title"><%= tas.title %></h5>
+                      <p class="card-text"><%= tas.Desc %></p>
+                      <form action="/todo/<%=tas._id%>?_method=DELETE" method="POST" >
+                        <button class="btn btn-danger btn-sm">Delete</button>
+                        </form>
+                      
+                    </div>
+                  </div>
+            </div>
+           
+       <% }  %>
+    </div>
+    <h1></h1>
+   
+    <%-  include('partials/footer') %> 
